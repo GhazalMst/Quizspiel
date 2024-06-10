@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Spiel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">Thema</a></li>
+                </ul>
+                <button class="login-btn">Login</button>
+                <a href="login.html" class="login-btn">Login</a>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1>Willkommen zu unserem Wissensspiel</h1>
+            <p>Teste dein Wissen in verschiedenen Kategorien und finde heraus, wie gut du wirklich bist!</p>
+            <a href="#" class="hero-btn">Erfahre mehr und starte jetzt</a>
+        </div>
+    </section>
+
+    <section class="Home">
+        <h1>Teste Dein Wissen</h1>
+        <p>Wähle eine Kategorie und fordere Dich selbst mit unseren Quizzen heraus</p>
+        <div class="row">
+            <div class="Home-col">
+                <h3>Mathematik-Quiz</h3>
+                <p>Beantworte Fragen von Algebra bis Kalkül und sieh, wie gut Du mit Zahlen umgehen kannst.</p>
+            </div>
+            <div class="Home-col">
+                <h3>Wissenschafts-Quiz</h3>
+                <p>Teste Dein Wissen in Biologie, Chemie, Physik und mehr. Bist Du ein Wissenschaftsgenie?</p>
+            </div>
+            <div class="Home-col">
+                <h3>Geschichts-Quiz</h3>
+                <p>Tauche ein in historische Ereignisse und Persönlichkeiten. Wie gut kennst Du die Vergangenheit?</p>
+            </div>
+            <div class="Home-col">
+                <h3>Kunst-Quiz</h3>
+                <p>Erkunde die Welt der Kunst, von klassischen Gemälden bis zu modernen Meisterwerken. Bist Du ein Kunstkenner?</p>
+            </div>
+        </div>
+    </section>
+
+ 
+    
+    
+        
+
+    <section></section>
+
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+
+        var loginModal = document.getElementById("loginModal");
+        var loginLink = document.getElementById("loginLink");
+        var closeBtn = document.getElementsByClassName("close-btn")[0];
+
+        loginLink.onclick = function(event) {
+            event.preventDefault();
+            loginModal.style.display = "block";
+        }
+
+        function closeModal() {
+            loginModal.style.display = "none";
+        }
+    </script>
+</body>
+</html>
+
+
